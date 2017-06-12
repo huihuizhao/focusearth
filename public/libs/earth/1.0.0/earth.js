@@ -18,7 +18,7 @@
     //var MOVE_END_WAIT = 1000;                 // time to wait for a move operation to be considered done (millis)
     var MOVE_END_WAIT = 1;
 
-    var OVERLAY_ALPHA = Math.floor(0.45 * 255);  // overlay transparency (on scale [0, 255])
+    var OVERLAY_ALPHA = Math.floor(0.60 * 255);  // overlay transparency (on scale [0, 255])
     var INTENSITY_SCALE_STEP = 10;            // step size of particle intensity color scale
     var MAX_PARTICLE_AGE = 100;               // max number of frames a particle is drawn before regeneration
     var PARTICLE_LINE_WIDTH = 1;            // line width of a drawn particle
@@ -622,7 +622,10 @@
     $.ajax({
         async: false,
         type: "GET",
-        url: 'data/globe_03.txt',
+        //url: 'data/Ice360180CoorRGB.txt',
+        url: 'data/温度201706041200_02.txt',
+        //url: 'data/globe_03.txt',
+        //url: 'data/ice4096_01.txt',
         success: function (content) {
             var data = content.split('\n');
             imageHeight = data.length - 1;
